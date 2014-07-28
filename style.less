@@ -1,0 +1,179 @@
+/*
+	Description: Canvas Interface
+	Author: Georgi Yankov
+	Author URI: http://gsy-design.com/
+	Author E-mail: webmaster@gsy-design.com
+	Version: 1.0
+*/
+
+/*==================================================================================================
+	MAIN CSS
+==================================================================================================*/
+
+/*************************************************
+	RESET CSS
+*************************************************/
+
+@import "init";
+
+/*************************************************
+	ROOT ELEMENTS
+*************************************************/
+
+body {
+	color: #000;
+	font: normal 14px Arial, Helvetica, sans-serif;
+    line-height: 18px;
+	padding-top: 20px;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 596px;
+
+	button {
+		background-color: #eb1125;
+		border: none;
+		color: #fff;
+		font-size: 14px;
+		margin: 0;
+		padding: 15px;
+		width: 140px;
+
+		&:hover {
+			background-color: #000;
+			cursor: pointer;
+		}
+	}
+}
+
+/*************************************************
+	CLEAR FLOATS
+*************************************************/
+
+#main-nav ul:after,
+#user-inputs:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+/*************************************************
+	BASIC CLASSES
+*************************************************/
+
+.external-link {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/*==================================================================================================
+	HEADER
+==================================================================================================*/
+
+#header {
+	padding-bottom: 40px;
+
+	h1 {
+		font: bold 18px Arial, Helvetica, sans-serif;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+}
+
+#main-nav {
+	li {
+		display: inline-block;
+		float: left;
+		margin-right: 12px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		.current-action {
+			background-color: #000;
+		}
+	}
+}
+
+/*==================================================================================================
+	CANVAS FORM
+==================================================================================================*/
+
+#canvas-form {
+	margin-bottom: 10px;
+}
+
+#user-inputs {
+	div {
+		border: 1px solid #000;
+		float: left;
+		margin: 0 12px 12px 0;
+		padding: 15px;
+		width: 260px;
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+
+		label {
+			display: inline-block;
+			width: 160px;
+		}
+
+		input {
+			display: inline-block;
+			width: 50px;
+		}
+	}
+}
+
+#wrapper #draw-btn {
+	display: block;
+	margin: 0 auto;
+	text-transform: uppercase;
+	width: 220px;
+}
+
+/*==================================================================================================
+	DRAWING AREA
+==================================================================================================*/
+
+#drawing-area-wrapper {
+	position: relative;
+}
+
+#drawing-area {
+	border: 1px solid #000;
+	margin-bottom: 10px;
+}
+
+#wrapper #clear-area-btn {
+	background-color: #000;
+	font-size: 12px;
+	padding: 2px;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 44px;
+}
+
+/*==================================================================================================
+	FOOTER
+==================================================================================================*/
+
+#footer {
+	padding-bottom: 10px;
+
+	p {
+		font-size: 12px;
+		text-align: center;
+	}
+}

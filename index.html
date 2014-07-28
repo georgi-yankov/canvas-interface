@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas Interface</title>
+    <meta name="author" content="Georgi Yankov" />
+    <link href="css/style.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- HEADER -->
+        <header id="header" role="banner">
+            <!-- TITLE -->
+            <h1>Canvas Interface</h1>
+
+            <!-- MAIN NAVIGATION -->
+            <nav id="main-nav" role="navigation">
+                <ul>
+                    <li>
+                        <button id="line-action" class="current-action">Line</button>
+                    </li>
+                    <li>
+                        <button id="arc-action">Arc</button>
+                    </li>
+                    <li>
+                        <button id="curve-action">Curve</button>
+                    </li>
+                    <li>
+                        <button id="rect-action">Rectangle</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- CANVAS FORM -->
+        <form id="canvas-form" role="form">
+            <!-- USER INPUTS -->
+            <div id="user-inputs">
+                <div>
+                    <label for="start-point-x">Starting point axis - X:</label>
+                    <input id="start-point-x" type="number" name="start-point-x" min="0" max="594" required autofocus />
+                </div>
+                <div>
+                    <label for="start-point-y">Starting point axis - Y:</label>
+                    <input id="start-point-y" type="number" name="start-point-y" min="0" max="450" required />
+                </div>
+                <div>
+                    <label for="end-point-x">Ending point axis - X:</label>
+                    <input id="end-point-x" type="number" name="end-point-x" min="0" max="594" required />
+                </div>
+                <div>
+                    <label for="end-point-y">Ending point axis - Y:</label>
+                    <input id="end-point-y" type="number" name="end-point-y" min="0" max="450" required />
+                </div>
+            </div>
+
+            <!-- DRAW BUTTON -->
+            <div>
+                <button id="draw-btn">Draw</button>
+            </div>
+        </form>
+
+        <!-- DRAWING AREA -->
+        <div id="drawing-area-wrapper">
+            <canvas id="drawing-area" width="594" height="450">Your browser does not support the HTML5 canvas tag.</canvas>
+            <button id="clear-area-btn">Clear</button>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="footer" role="contentinfo">
+            <p>Copyright &copy; 2013 Canvas Interface. All rights reserved.</p>
+            <p>Made by <a class="external-link" href="http://www.gsy-design.com/" target="_blank" title="GSY Web Design">Georgi Yankov</a></p>
+        </footer>
+    </div>
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    <script src="js/libs/jquery-1.9.1.min.js"></script>
+    <script src="js/shape.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
